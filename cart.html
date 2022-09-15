@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html lang="html">
+<head>
+    <title>Bluray Shop</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="css/generic.css">
+    <link rel="stylesheet" href="css/manage.css">
+    <link rel="stylesheet" href="css/shop.css">
+    <script src="js/bluray.js"></script>
+    <script src="js/shop.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/login.js"></script>
+</head>
+<body onload="loadCartItems(); setCartName(); setLoginButton()">
+<div class="navbar">
+    <p class="title">Bluray Shop</p>
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="manage.html" id="manage-link">Manage</a>
+    <div style="flex:1"></div>
+    <a href="#" class="highlight" style="display: none" id="login-link">Login</a>
+    <a class="active" href="#" id="cart-link">Cart</a>
+</div>
+<div class="add-item-panel" id="items-list" style="height: auto">
+    <h1 id="cart-name" style="text-shadow: 0 0 0 var(--text); transition: all 300ms;">
+        Your cart (Payment at the bottom of the page
+    </h1>
+</div>
+
+<div class="add-item-panel" id="buy-panel">
+    <p>Please choose your payment method:</p>
+    <div>
+        <button class="shop-button" onclick="showCard()" style="width: 10em">Card</button>
+        <button class="shop-button" onclick="showWire()" style="width: 10em">Wire Transfer</button>
+    </div>
+    <div id="div-wire" style="display: none; flex-direction: column">
+        <label style="margin-bottom: 0.5em;">
+            Bank Name
+            <input id="wire-bank-name" class="shop-input" style="width: 100%"/>
+        </label>
+        <label style="margin-bottom: 0.5em;">
+            Your Full Name
+            <input id="wire-name" class="shop-input" style="width: 100%"/>
+        </label>
+        <label style="margin-bottom: 0.5em;">
+            IBAN
+            <input id="wire-iban" class="shop-input" style="width: 100%"/>
+        </label>
+        <button class="shop-button" style="width: 10em" onclick="purchaseWire()">Purchase</button>
+    </div>
+    <div id="div-card" style="display: flex; flex-direction: column">
+        <label style="margin-bottom: 0.5em;">
+            Card Number
+            <input id="card-number" class="shop-input" style="width: 100%"/>
+        </label>
+        <label style="margin-bottom: 0.5em;">
+            Expiry Year
+            <input id="card-year" type="number" class="shop-input" style="width: 100%"/>
+        </label>
+        <label style="margin-bottom: 0.5em;">
+            Expiry Month
+            <input id="card-month" type="number" max="12" min="1" class="shop-input" style="width: 100%"/>
+        </label>
+        <label style="margin-bottom: 0.5em;">
+            CVC
+            <input id="card-cvc" type="number" class="shop-input" style="width: 100%"/>
+        </label>
+        <button class="shop-button" style="width: 10em" onclick="purchaseCard()">Purchase</button>
+    </div>
+</div>
+</body>
+</html>

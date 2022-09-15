@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html lang="html">
+<head>
+    <title>Bluray Shop</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="css/generic.css">
+    <link rel="stylesheet" href="css/manage.css">
+    <link rel="stylesheet" href="css/shop.css">
+    <script src="js/bluray.js"></script>
+    <script src="js/shop.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/login.js"></script>
+</head>
+<body onload="loadCartNumber(); setLoginButton(); checkLoggedIn()">
+<div class="navbar">
+    <p class="title">Bluray Shop</p>
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="manage.html" id="manage-link">Manage</a>
+    <div style="flex:1"></div>
+    <a href="#" class="highlight" style="display: none" id="login-link">Login</a>
+    <a href="cart.html" id="cart-link">Cart</a>
+</div>
+</body>
+<div class="add-item-panel" id="items-list">
+    <h1 id="changes-notif" style="opacity: 0; text-shadow: 0 0 0 var(--text); transition: all 300ms;">Success!</h1>
+    <div class="panel-item">
+        <label>
+            Username
+            <input class="shop-input" id="login-username">
+        </label>
+    </div>
+
+    <div class="panel-item">
+        <label>
+            Password
+            <input class="shop-input" id="login-password" type="password">
+        </label>
+    </div>
+
+    <div class="panel-item">
+        <button class="shop-button" onclick="login()" style="width: 7em">
+            Login
+        </button>
+    </div>
+    <div class="panel-item" style="height: 2px; background: black; padding: 0; width: 50%; box-shadow: 0 0 3px white;">
+    </div>
+
+
+    <div class="panel-item">
+        <label>
+            Username
+            <input class="shop-input" id="signup-username">
+        </label>
+    </div>
+
+    <div class="panel-item">
+        <label>
+            Password
+            <input class="shop-input" id="signup-password" type="password">
+        </label>
+    </div>
+
+    <div class="panel-item">
+        <label>
+            Repeat Password
+            <input class="shop-input" id="signup-password-repeat" type="password">
+        </label>
+    </div>
+    <div class="panel-item">
+        <button class="shop-button" onclick="signUp()" style="width: 7em">
+            Signup
+        </button>
+    </div>
+</div>
+</html>

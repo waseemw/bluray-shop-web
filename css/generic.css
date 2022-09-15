@@ -1,0 +1,84 @@
+﻿:root {
+    --background: #2d2d2d;
+    --background-shadow: #000000;
+    --background-light: #484848;
+    --background-light-hover: #868686;
+    --background-light-shadow: #FFFFFF;
+    --text: #dcdcdc;
+    --text-accent: #159bff;
+    --text-accent-hover: #82c6ff;
+    --text-highlight: #dc8405;
+    --text-highlight-hover: #efb459;
+}
+
+body {
+    font-family: Cambria, serif;
+    background-color: var(--background);
+    margin: 0;
+    color: var(--text);
+}
+
+.navbar {
+    width: 100%;
+    height: 2.5em;
+    background-color: var(--background-light);
+    display: flex;
+    margin-bottom: 0.5em;
+}
+
+.navbar a {
+    color: inherit;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1em;
+    text-decoration: none;
+    transition: all 300ms;
+}
+
+.navbar a:hover {
+    background-color: var(--background-light-hover) !important;
+}
+
+.navbar a.active {
+    background-color: var(--background-light-hover);
+}
+
+.navbar .title {
+    font-size: 1.5em;
+    padding: 0 2em 0 0.5em;
+    font-weight: bold;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-accent);
+    transition: all 300ms;
+    user-select: none;
+}
+
+.navbar .title:hover {
+    color: var(--text-accent-hover);
+    text-shadow: 0 0 3px var(--background-light-shadow);
+}
+
+.content {
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5em;
+}
+
+img {
+    max-width: max-content;
+    width: 100%;
+}
+
+.highlight{
+    background-color: #cc2525;
+    min-width: 10em;
+    box-shadow: 0 0 50px #710000 inset;
+    border-radius: 10px;
+    margin-right: 3em;
+}

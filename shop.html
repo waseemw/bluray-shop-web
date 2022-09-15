@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html lang="html">
+<head>
+    <title>Bluray Shop</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="css/generic.css">
+    <link rel="stylesheet" href="css/shop.css">
+    <script src="js/bluray.js"></script>
+    <script src="js/shop.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/login.js"></script>
+</head>
+<body onload="loadShopItems(); loadCartNumber(); setLoginButton()">
+<div class="navbar">
+    <p class="title">Bluray Shop</p>
+    <a href="index.html">Home</a>
+    <a class="active" href="#">Shop</a>
+    <a href="manage.html" id="manage-link">Manage</a>
+    <div style="flex:1"></div>
+    <a href="#" class="highlight" style="display: none" id="login-link">Login</a>
+    <a href="cart.html" id="cart-link">Cart</a>
+</div>
+</body>
+<div class="items-list">
+
+</div>
+</html>
